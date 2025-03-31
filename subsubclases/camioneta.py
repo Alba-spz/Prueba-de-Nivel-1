@@ -10,6 +10,9 @@ class Camioneta(Coche):
     def __str__(self):
         return f"Camioneta(color={self.color}, ruedas={self.ruedas}, velocidad={self.velocidad}, cilindrada={self.cilindrada}, marca={self.marca}, modelo={self.modelo}, capacidad_carga={self.capacidad_carga})"
         
+    def __name__(self): 
+        return self.__class__.__name__()
+    
     def catalogar(vehiculos):
         for vehiculo in vehiculos:
             print(f"{vehiculo.__class__.__name__}: {vehiculo}")
